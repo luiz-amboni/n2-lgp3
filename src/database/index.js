@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/n2lgp', { useNewUrlParser: true, useUnifiedTopology: true })
+connectionMongo = mongoose.connect('mongodb+srv://luiz:pause1029@cluster0.fkir0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = global.Promise;
 
 module.exports = mongoose

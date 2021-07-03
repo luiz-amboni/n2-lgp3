@@ -16,10 +16,11 @@ router.post('/register', async (req, res) => {
         let user = await User.create(req.body);
         
         user.password = undefined;
-
+        console.log('Deu certo');
         return res.send({ user });
 
    } catch (err) {
+       console.log('Deu erro');
        return res.status(400).send({ error: 'Registrarion failed' });
    }
 });
